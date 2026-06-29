@@ -10,6 +10,8 @@ license: Proprietary. LICENSE.txt has complete terms
 
 This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see REFERENCE.md. If you need to fill out a PDF form, read FORMS.md and follow its instructions.
 
+pypdf, pdfplumber, and reportlab are already installed just use them directly.
+
 ## Quick Start
 
 ```bash
@@ -168,16 +170,16 @@ python scripts/password_protect.py input.pdf userpassword ownerpassword
 
 ## Quick Reference
 
-| Task | Best Tool | Command/Code |
-|------|-----------|--------------|
-| Merge PDFs | pypdf | `writer.add_page(page)` |
-| Split PDFs | pypdf | One page per file |
-| Extract text | pdfplumber | `page.extract_text()` |
-| Extract tables | pdfplumber | `page.extract_tables()` |
-| Create PDFs | reportlab | Canvas or Platypus |
-| Command line merge | qpdf | `qpdf --empty --pages ...` |
-| OCR scanned PDFs | pytesseract | Convert to image first |
-| Fill PDF forms | pdf-lib or pypdf (see FORMS.md) | See FORMS.md |
+| Task               | Best Tool                       | Command/Code               |
+| ------------------ | ------------------------------- | -------------------------- |
+| Merge PDFs         | pypdf                           | `writer.add_page(page)`    |
+| Split PDFs         | pypdf                           | One page per file          |
+| Extract text       | pdfplumber                      | `page.extract_text()`      |
+| Extract tables     | pdfplumber                      | `page.extract_tables()`    |
+| Create PDFs        | reportlab                       | Canvas or Platypus         |
+| Command line merge | qpdf                            | `qpdf --empty --pages ...` |
+| OCR scanned PDFs   | pytesseract                     | Convert to image first     |
+| Fill PDF forms     | pdf-lib or pypdf (see FORMS.md) | See FORMS.md               |
 
 ## Next Steps
 
